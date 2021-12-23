@@ -1,0 +1,447 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title "SSI2130 VCO"
+Date "2021-12-23"
+Rev "0"
+Comp ""
+Comment1 "creativecommons.org/licenses/by/4.0/"
+Comment2 "License: CC by 4.0"
+Comment3 "Author: Jordan Aceto"
+Comment4 ""
+$EndDescr
+Text HLabel 2650 3150 0    50   Input ~ 0
+lin_fm_in
+Text HLabel 8300 3250 2    50   Output ~ 0
+lin_fm_out
+Text HLabel 6950 5150 2    50   Output ~ 0
+time_rev_out
+$Comp
+L Amplifier_Operational:TL072 U4
+U 1 1 6229F95B
+P 4000 3250
+F 0 "U4" H 4200 3450 50  0000 C CNN
+F 1 "TL072" H 4200 3550 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4000 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4000 3250 50  0001 C CNN
+	1    4000 3250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 622A1E3F
+P 3950 2800
+F 0 "R3" V 3743 2800 50  0000 C CNN
+F 1 "100k" V 3834 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 2800 50  0001 C CNN
+F 3 "~" H 3950 2800 50  0001 C CNN
+	1    3950 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 622A2594
+P 3950 2400
+F 0 "C2" V 3698 2400 50  0000 C CNN
+F 1 "20p" V 3789 2400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3988 2250 50  0001 C CNN
+F 3 "~" H 3950 2400 50  0001 C CNN
+	1    3950 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 622A2912
+P 3350 3150
+F 0 "R2" V 3143 3150 50  0000 C CNN
+F 1 "100k" V 3234 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3280 3150 50  0001 C CNN
+F 3 "~" H 3350 3150 50  0001 C CNN
+	1    3350 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 622A2DE7
+P 3350 2600
+F 0 "R1" V 3143 2600 50  0000 C CNN
+F 1 "100k" V 3234 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3280 2600 50  0001 C CNN
+F 3 "~" H 3350 2600 50  0001 C CNN
+	1    3350 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 622A343C
+P 2900 3150
+F 0 "C1" V 2648 3150 50  0000 C CNN
+F 1 "100n" V 2739 3150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2938 3000 50  0001 C CNN
+F 3 "~" H 2900 3150 50  0001 C CNN
+	1    2900 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 3250 4400 3250
+Wire Wire Line
+	4400 2400 4100 2400
+Wire Wire Line
+	3700 3150 3600 3150
+Wire Wire Line
+	3600 3150 3600 2800
+Wire Wire Line
+	3600 2400 3800 2400
+Connection ~ 3600 3150
+Wire Wire Line
+	3600 3150 3500 3150
+Wire Wire Line
+	3800 2800 3600 2800
+Connection ~ 3600 2800
+Wire Wire Line
+	3600 2800 3600 2600
+Wire Wire Line
+	3500 2600 3600 2600
+Connection ~ 3600 2600
+Wire Wire Line
+	3600 2600 3600 2400
+Wire Wire Line
+	3200 3150 3050 3150
+Wire Wire Line
+	2650 3150 2750 3150
+$Comp
+L power:+2V5 #PWR011
+U 1 1 622A7DD3
+P 3050 2450
+F 0 "#PWR011" H 3050 2300 50  0001 C CNN
+F 1 "+2V5" H 3065 2623 50  0000 C CNN
+F 2 "" H 3050 2450 50  0001 C CNN
+F 3 "" H 3050 2450 50  0001 C CNN
+	1    3050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2450 3050 2600
+Wire Wire Line
+	3050 2600 3200 2600
+Wire Wire Line
+	4100 2800 4400 2800
+Connection ~ 4400 2800
+Wire Wire Line
+	4400 2800 4400 2400
+$Comp
+L power:GND #PWR012
+U 1 1 622A9BCF
+P 3600 3450
+F 0 "#PWR012" H 3600 3200 50  0001 C CNN
+F 1 "GND" H 3605 3277 50  0000 C CNN
+F 2 "" H 3600 3450 50  0001 C CNN
+F 3 "" H 3600 3450 50  0001 C CNN
+	1    3600 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3450 3600 3350
+Wire Wire Line
+	3600 3350 3700 3350
+$Comp
+L Amplifier_Operational:TL072 U4
+U 2 1 622AD97D
+P 7800 3250
+F 0 "U4" H 8000 3450 50  0000 C CNN
+F 1 "TL072" H 8000 3550 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7800 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7800 3250 50  0001 C CNN
+	2    7800 3250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 622B3A27
+P 7750 2800
+F 0 "R9" V 7543 2800 50  0000 C CNN
+F 1 "20k" V 7634 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7680 2800 50  0001 C CNN
+F 3 "~" H 7750 2800 50  0001 C CNN
+	1    7750 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 622B3A2D
+P 7750 2400
+F 0 "C4" V 7498 2400 50  0000 C CNN
+F 1 "100p" V 7589 2400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7788 2250 50  0001 C CNN
+F 3 "~" H 7750 2400 50  0001 C CNN
+	1    7750 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 622B3A33
+P 7150 2950
+F 0 "R7" V 6943 2950 50  0000 C CNN
+F 1 "20k" V 7034 2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7080 2950 50  0001 C CNN
+F 3 "~" H 7150 2950 50  0001 C CNN
+	1    7150 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 3250 8200 2800
+Wire Wire Line
+	8200 2400 7900 2400
+Wire Wire Line
+	7400 3150 7400 2950
+Wire Wire Line
+	7400 2400 7600 2400
+Wire Wire Line
+	7600 2800 7400 2800
+Connection ~ 7400 2800
+Wire Wire Line
+	7300 2950 7400 2950
+Wire Wire Line
+	7900 2800 8200 2800
+Connection ~ 8200 2800
+Wire Wire Line
+	8200 2800 8200 2400
+Wire Wire Line
+	7400 3150 7500 3150
+Wire Wire Line
+	8100 3250 8200 3250
+$Comp
+L Device:R R8
+U 1 1 622B6352
+P 7150 3350
+F 0 "R8" V 6943 3350 50  0000 C CNN
+F 1 "20k" V 7034 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7080 3350 50  0001 C CNN
+F 3 "~" H 7150 3350 50  0001 C CNN
+	1    7150 3350
+	0    1    1    0   
+$EndComp
+Connection ~ 7400 2950
+Wire Wire Line
+	7400 2950 7400 2800
+Wire Wire Line
+	7400 2400 7400 2800
+Wire Wire Line
+	7500 3350 7400 3350
+Wire Wire Line
+	7000 3350 6850 3350
+Wire Wire Line
+	6850 3350 6850 3150
+Wire Wire Line
+	6850 2950 7000 2950
+Wire Wire Line
+	6850 3150 4400 3150
+Wire Wire Line
+	4400 2800 4400 3150
+Connection ~ 6850 3150
+Wire Wire Line
+	6850 3150 6850 2950
+Connection ~ 4400 3150
+Wire Wire Line
+	4400 3150 4400 3250
+$Comp
+L Transistor_FET:2N7002 Q1
+U 1 1 622C2864
+P 7300 3800
+F 0 "Q1" H 7504 3846 50  0000 L CNN
+F 1 "2N7002" H 7504 3755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7500 3725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 7300 3800 50  0001 L CNN
+	1    7300 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 622C52C2
+P 7400 4100
+F 0 "#PWR018" H 7400 3850 50  0001 C CNN
+F 1 "GND" H 7405 3927 50  0000 C CNN
+F 2 "" H 7400 4100 50  0001 C CNN
+F 3 "" H 7400 4100 50  0001 C CNN
+	1    7400 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4100 7400 4000
+Wire Wire Line
+	7400 3600 7400 3350
+Connection ~ 7400 3350
+Wire Wire Line
+	7400 3350 7300 3350
+$Comp
+L Comparator:LM311 U6
+U 1 1 622CB24D
+P 5700 5150
+F 0 "U6" H 5950 5000 50  0000 L CNN
+F 1 "LM311" H 5950 4900 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 5150 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm311.pdf" H 5700 5150 50  0001 C CNN
+	1    5700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 622CE501
+P 5050 5600
+F 0 "R4" H 4980 5554 50  0000 R CNN
+F 1 "100R" H 4980 5645 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 5600 50  0001 C CNN
+F 3 "~" H 5050 5600 50  0001 C CNN
+	1    5050 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 622D4E1F
+P 5900 4250
+F 0 "C3" V 5648 4250 50  0000 C CNN
+F 1 "100p" V 5739 4250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5938 4100 50  0001 C CNN
+F 3 "~" H 5900 4250 50  0001 C CNN
+	1    5900 4250
+	0    1    1    0   
+$EndComp
+NoConn ~ 5700 4850
+NoConn ~ 5800 4850
+$Comp
+L power:GND #PWR016
+U 1 1 622D792B
+P 5750 5650
+F 0 "#PWR016" H 5750 5400 50  0001 C CNN
+F 1 "GND" H 5755 5477 50  0000 C CNN
+F 2 "" H 5750 5650 50  0001 C CNN
+F 3 "" H 5750 5650 50  0001 C CNN
+	1    5750 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5550 5700 5450
+$Comp
+L power:GND #PWR013
+U 1 1 622D9895
+P 5050 5850
+F 0 "#PWR013" H 5050 5600 50  0001 C CNN
+F 1 "GND" H 5055 5677 50  0000 C CNN
+F 2 "" H 5050 5850 50  0001 C CNN
+F 3 "" H 5050 5850 50  0001 C CNN
+	1    5050 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5850 5050 5750
+Wire Wire Line
+	5050 5450 5050 5050
+Wire Wire Line
+	5050 5050 5400 5050
+Wire Wire Line
+	6000 5150 6250 5150
+Wire Wire Line
+	6250 4250 6050 4250
+$Comp
+L Device:R R5
+U 1 1 622DC68A
+P 5500 4250
+F 0 "R5" V 5293 4250 50  0000 C CNN
+F 1 "100k" V 5384 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5430 4250 50  0001 C CNN
+F 3 "~" H 5500 4250 50  0001 C CNN
+	1    5500 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 4250 5050 4250
+Wire Wire Line
+	5050 4250 5050 5050
+Connection ~ 5050 5050
+Wire Wire Line
+	5650 4250 5750 4250
+Connection ~ 6250 5150
+$Comp
+L Device:R R6
+U 1 1 622E6802
+P 6250 4000
+F 0 "R6" H 6180 3954 50  0000 R CNN
+F 1 "10k" H 6180 4045 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 4000 50  0001 C CNN
+F 3 "~" H 6250 4000 50  0001 C CNN
+	1    6250 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 4150 6250 4250
+Connection ~ 6250 4250
+$Comp
+L power:+5V #PWR017
+U 1 1 622E8F02
+P 6250 3750
+F 0 "#PWR017" H 6250 3600 50  0001 C CNN
+F 1 "+5V" H 6265 3923 50  0000 C CNN
+F 2 "" H 6250 3750 50  0001 C CNN
+F 3 "" H 6250 3750 50  0001 C CNN
+	1    6250 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3750 6250 3850
+Wire Wire Line
+	6250 5150 6250 4250
+Wire Wire Line
+	4400 3250 4400 5250
+Wire Wire Line
+	4400 5250 5400 5250
+Connection ~ 4400 3250
+Wire Wire Line
+	8300 3250 8200 3250
+Connection ~ 8200 3250
+$Comp
+L power:+12V #PWR015
+U 1 1 6231C1D1
+P 5600 4750
+F 0 "#PWR015" H 5600 4600 50  0001 C CNN
+F 1 "+12V" H 5615 4923 50  0000 C CNN
+F 2 "" H 5600 4750 50  0001 C CNN
+F 3 "" H 5600 4750 50  0001 C CNN
+	1    5600 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4750 5600 4850
+$Comp
+L power:-12V #PWR014
+U 1 1 6231E9A8
+P 5550 5650
+F 0 "#PWR014" H 5550 5750 50  0001 C CNN
+F 1 "-12V" H 5565 5823 50  0000 C CNN
+F 2 "" H 5550 5650 50  0001 C CNN
+F 3 "" H 5550 5650 50  0001 C CNN
+	1    5550 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5750 5650 5750 5550
+Wire Wire Line
+	5750 5550 5700 5550
+Wire Wire Line
+	5550 5650 5550 5550
+Wire Wire Line
+	5550 5550 5600 5550
+Wire Wire Line
+	5600 5550 5600 5450
+Wire Wire Line
+	6850 5150 6850 3800
+Wire Wire Line
+	6850 3800 7100 3800
+Wire Wire Line
+	6250 5150 6850 5150
+Wire Wire Line
+	6950 5150 6850 5150
+Connection ~ 6850 5150
+$EndSCHEMATC

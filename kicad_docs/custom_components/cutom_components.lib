@@ -1,0 +1,66 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# SSI2130
+#
+DEF SSI2130 U 0 40 Y Y 7 L N
+F0 "U" 400 -550 50 H V C CNN
+F1 "SSI2130" 400 -650 50 H V C CNN
+F2 "" 0 -650 50 H I C CNN
+F3 "" 0 -650 50 H I C CNN
+DRAW
+T 0 150 -350 50 0 1 0 Generator Normal 0 L C
+T 0 150 -250 50 0 1 0 Triangle Normal 0 L C
+T 0 -400 -250 50 0 2 1 Converter Normal 0 L C
+T 0 -400 -150 50 0 2 1 Saw Normal 0 L C
+T 0 50 -250 50 0 3 1 Converter Normal 0 L C
+T 0 50 -150 50 0 3 1 Pulse Normal 0 L C
+T 0 50 50 50 0 4 1 Analog Normal 0 L C
+T 0 50 -50 50 0 4 1 Multiplier Normal 0 L C
+T 0 50 -250 50 0 5 1 Shaper Normal 0 L C
+T 0 50 -150 50 0 5 1 "Sine Wave" Normal 0 L C
+T 0 150 -300 50 0 6 1 Mixer Normal 0 L C
+T 0 50 0 50 0 7 1 Power Normal 0 L C
+P 6 1 0 0 -650 450 -650 -550 600 -550 600 450 250 450 -650 450 N
+P 6 2 1 0 -450 0 -450 300 500 300 500 -350 -450 -350 -450 0 N
+P 5 3 1 0 500 300 -450 300 -450 -350 500 -350 500 300 N
+P 5 4 1 0 -450 250 -450 -250 450 -250 450 250 -450 250 N
+P 5 5 1 0 -450 300 -450 -350 500 -350 500 300 -450 300 N
+P 6 6 1 0 450 -450 -450 -450 -450 400 -450 700 450 700 450 -450 N
+P 5 7 1 0 -450 250 -450 -250 450 -250 450 250 -450 250 N
+X tri_out 1 700 100 100 L 50 50 1 1 O
+X tcap 14 -750 -450 100 R 50 50 1 1 I
+X hard_sync 17 -750 -50 100 R 50 50 1 1 I
+X time_rev 18 -750 -250 100 R 50 50 1 1 I
+X soft_sync 19 -750 150 100 R 50 50 1 1 I
+X hft_base 20 0 -650 100 U 50 50 1 1 I
+X lin_freq 21 -750 350 100 R 50 50 1 1 I
+X vref 23 0 550 100 D 50 50 1 1 W
+X square_out 28 700 -100 100 L 50 50 1 1 O
+X hf_track 6 -150 -650 100 U 50 50 1 1 I
+X saw_out 29 600 0 100 L 50 50 2 1 O
+X pulse_out 30 600 0 100 L 50 50 3 1 O
+X pwm_in_- 31 -550 150 100 R 50 50 3 1 I
+X pwm_in_+ 32 -550 -200 100 R 50 50 3 1 I
+X expo_scale 22 -550 150 100 R 50 50 4 1 I
+X bw_comp 26 -550 -150 100 R 50 50 4 1 I
+X expo_freq 7 -550 0 100 R 50 50 4 1 I
+X sine_in_+ 2 -550 -200 100 R 50 50 5 1 I
+X sine_out 24 600 0 100 L 50 50 5 1 O
+X sine_in_- 3 -550 150 100 R 50 50 5 1 I
+X saw_mix 10 -550 -200 100 R 50 50 6 1 I
+X pulse_mix 11 -550 -50 100 R 50 50 6 1 I
+X aux_1_mix 12 -550 250 100 R 50 50 6 1 I
+X aux_2_mix 13 -550 100 100 R 50 50 6 1 I
+X mix_out 25 550 150 100 L 50 50 6 1 O
+X aux_in_1 4 -550 600 100 R 50 50 6 1 I
+X aux_in_2 5 -550 450 100 R 50 50 6 1 I
+X tri_mix 9 -550 -350 100 R 50 50 6 1 I
+X dgnd 15 -550 -50 100 R 50 50 7 1 W
+X agnd 16 -550 50 100 R 50 50 7 1 W
+X V+ 27 -550 150 100 R 50 50 7 1 W
+X V- 8 -550 -150 100 R 50 50 7 1 W
+ENDDRAW
+ENDDEF
+#
+#End Library
