@@ -12,7 +12,7 @@
 
 ## [Schematic here](https://github.com/JordanAceto/SSI2130_VCO/blob/main/construction_docs/SSI2130_VCO_schematic.pdf)
 
-![](./VCO_core/pics/pcb_front.png?raw=true "PCB front")  ![](./VCO_core/pics/pcb_rear.png?raw=true "PCB rear")
+![](./pics/pcb_front.png?raw=true "PCB front")  ![](./pics/pcb_rear.png?raw=true "PCB rear")
 
 ## Status of the project:
 
