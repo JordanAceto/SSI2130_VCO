@@ -42,17 +42,6 @@ F 3 "~" H 3950 2800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C2
-U 1 1 622A2594
-P 3950 2400
-F 0 "C2" V 3698 2400 50  0000 C CNN
-F 1 "20p" V 3789 2400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3988 2250 50  0001 C CNN
-F 3 "~" H 3950 2400 50  0001 C CNN
-	1    3950 2400
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R2
 U 1 1 622A2912
 P 3350 3150
@@ -444,4 +433,15 @@ Wire Wire Line
 Wire Wire Line
 	6950 5150 6850 5150
 Connection ~ 6850 5150
+$Comp
+L Device:C C2
+U 1 1 622A2594
+P 3950 2400
+F 0 "C2" V 3698 2400 50  0000 C CNN
+F 1 "20p" V 3789 2400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3988 2250 50  0001 C CNN
+F 3 "~" H 3950 2400 50  0001 C CNN
+	1    3950 2400
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
