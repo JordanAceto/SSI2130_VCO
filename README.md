@@ -10,7 +10,7 @@
 - PWM modulation inputs (choose triangle or saw input for the pulse wave)
 - Designed to plug into a separate carrier pcb which houses the pots and jacks.
 
-## [Schematic here](https://github.com/JordanAceto/SSI2130_VCO/construction_docs/SSI2130_VCO_schematic.pdf)
+## [Schematic here](https://github.com/JordanAceto/SSI2130_VCO/blob/main/construction_docs/SSI2130_VCO_schematic.pdf)
 
 ![](./VCO_core/pics/pcb_front.png?raw=true "PCB front")  ![](./VCO_core/pics/pcb_rear.png?raw=true "PCB rear")
 
