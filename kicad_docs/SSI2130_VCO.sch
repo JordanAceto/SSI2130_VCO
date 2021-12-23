@@ -43,9 +43,9 @@ F5 "raw_saw_out" O R 6450 2350 50
 F6 "raw_sine_out" O R 6450 2150 50 
 F7 "raw_pulse_out" O R 6450 2450 50 
 F8 "raw_tri_out" O R 6450 2250 50 
-F9 "lin_FM_in" I L 4950 3150 50 
+F9 "lin_FM_in" I L 4950 3050 50 
 F10 "fine_tune_in" I L 4950 2250 50 
-F11 "time_rev_in" I L 4950 3050 50 
+F11 "time_rev_in" I L 4950 3150 50 
 F12 "sync_in" I L 4950 3450 50 
 F13 "coarse_tune_in" I L 4950 2150 50 
 F14 "PWM_CV_in" I L 4950 3850 50 
