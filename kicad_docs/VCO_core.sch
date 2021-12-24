@@ -643,7 +643,7 @@ Connection ~ 2550 2700
 Wire Wire Line
 	2550 2250 2550 2700
 Wire Wire Line
-	4300 2250 2550 2250
+	4300 2250 2900 2250
 Wire Wire Line
 	2550 3200 2550 3100
 $Comp
@@ -818,4 +818,116 @@ Connection ~ 4150 3850
 Wire Wire Line
 	4150 3850 4150 5100
 NoConn ~ 5750 2300
+Wire Wire Line
+	1800 4850 1800 4750
+$Comp
+L power:GND #PWR?
+U 1 1 61C66CF1
+P 1800 4850
+AR Path="/61C66CF1" Ref="#PWR?"  Part="1" 
+AR Path="/61D5F596/61C66CF1" Ref="#PWR068"  Part="1" 
+F 0 "#PWR068" H 1800 4600 50  0001 C CNN
+F 1 "GND" H 1805 4677 50  0000 C CNN
+F 2 "" H 1800 4850 50  0001 C CNN
+F 3 "" H 1800 4850 50  0001 C CNN
+	1    1800 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4300 1300 4300
+$Comp
+L Device:R R?
+U 1 1 61C66CF9
+P 1550 4300
+AR Path="/61C66CF9" Ref="R?"  Part="1" 
+AR Path="/61D5F596/61C66CF9" Ref="R50"  Part="1" 
+F 0 "R50" V 1750 4250 50  0000 L CNN
+F 1 "10k" V 1650 4250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1480 4300 50  0001 C CNN
+F 3 "~" H 1550 4300 50  0001 C CNN
+	1    1550 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61C66CFF
+P 1150 4300
+AR Path="/61C66CFF" Ref="C?"  Part="1" 
+AR Path="/61D5F596/61C66CFF" Ref="C29"  Part="1" 
+F 0 "C29" V 898 4300 50  0000 C CNN
+F 1 "10u" V 989 4300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1188 4150 50  0001 C CNN
+F 3 "~" H 1150 4300 50  0001 C CNN
+	1    1150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D1
+U 1 1 61C722F7
+P 1800 3900
+F 0 "D1" V 1754 3980 50  0000 L CNN
+F 1 "1N4148W" V 1845 3980 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 1800 3725 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 1800 3900 50  0001 C CNN
+	1    1800 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D2
+U 1 1 61C72C8F
+P 1800 4600
+F 0 "D2" V 1754 4680 50  0000 L CNN
+F 1 "1N4148W" V 1845 4680 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 1800 4425 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 1800 4600 50  0001 C CNN
+	1    1800 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 4450 1800 4300
+Wire Wire Line
+	1700 4300 1800 4300
+Connection ~ 1800 4300
+Wire Wire Line
+	1800 4300 1800 4150
+$Comp
+L power:+5V #PWR027
+U 1 1 61C8EF04
+P 850 4150
+F 0 "#PWR027" H 850 4000 50  0001 C CNN
+F 1 "+5V" H 865 4323 50  0000 C CNN
+F 2 "" H 850 4150 50  0001 C CNN
+F 3 "" H 850 4150 50  0001 C CNN
+	1    850  4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR067
+U 1 1 61C8F814
+P 1800 3650
+F 0 "#PWR067" H 1800 3500 50  0001 C CNN
+F 1 "+5V" H 1815 3823 50  0000 C CNN
+F 2 "" H 1800 3650 50  0001 C CNN
+F 3 "" H 1800 3650 50  0001 C CNN
+	1    1800 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3650 1800 3750
+Wire Wire Line
+	1000 4300 850  4300
+Wire Wire Line
+	850  4300 850  4150
+Wire Wire Line
+	1800 4150 2900 4150
+Wire Wire Line
+	2900 4150 2900 2250
+Connection ~ 1800 4150
+Wire Wire Line
+	1800 4150 1800 4050
+Connection ~ 2900 2250
+Wire Wire Line
+	2900 2250 2550 2250
+Text Notes 1000 4850 0    50   ~ 0
+Sync "kick start" \ncircuit to ensure \nthat the VCO\nstarts up.
 $EndSCHEMATC
