@@ -10,14 +10,21 @@
 - PWM modulation inputs (choose triangle or saw input for the pulse wave)
 - Designed to plug into a separate carrier pcb which houses the pots and jacks.
 
-## [Schematic here](https://github.com/JordanAceto/SSI2130_VCO/blob/main/construction_docs/SSI2130_VCO_schematic.pdf)
+## [SCHEMATIC](https://github.com/JordanAceto/SSI2130_VCO/blob/main/construction_docs/SSI2130_VCO_schematic.pdf)
 
 ![](./pics/pcb_front.png?raw=true "PCB front")  ![](./pics/pcb_rear.png?raw=true "PCB rear")
 
+
+| Power rail | Current consumption |
+|------|------|
+| +12v | 30mA |
+| -12v | 30mA |
+
 ## Status of the project:
 
-Waiting for boards to do a prototype evaluation
-
-Revision | safe to order boards
----------|---------------
-0        | &#9744;
+Task | Status |
+---------|--------------|
+Schematic capture | &#9745;
+PCB layout | &#9745;
+Test build | &#9745;
+Safe to order boards| &#9745;
