@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name cutom_components)(type Legacy)(uri ${KIPRJMOD}/custom_components/cutom_components.lib)(options "")(descr ""))
-)
